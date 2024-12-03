@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Ensures proper rendering and touch zooming on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assistant Vocal</title>
+    <!-- Main stylesheet with Tailwind CSS -->
+    <link href="./styles/main.css" rel="stylesheet" />
+  </head>
+  <!-- Body with dark mode support and smooth transitions -->
+  <body
+    class="min-h-screen bg-white dark:bg-slate-900 transition-colors duration-200"
+  >
+    <!-- Main content wrapper -->
+    <main class="min-h-full flex flex-col items-center justify-center p-6">
+      <!-- Content container with maximum width and spacing -->
+      <div class="w-full max-w-md mx-auto space-y-8">
+        <!-- Title with gradient effect -->
+        <h1
+          class="text-4xl font-semibold text-center bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent"
+        >
+          Assistant Vocal
+        </h1>
+
+        <!-- Main interface container -->
+        <div class="flex flex-col items-center space-y-6">
+          <!-- Audio visualizer container -->
+          <div
+            class="w-full bg-white dark:bg-slate-800 rounded-lg shadow-lg p-4"
+          >
+            <!-- Canvas for waveform visualization -->
+            <canvas
+              id="visualizer"
+              class="w-full h-32 rounded-lg border border-gray-200 dark:border-gray-700"
+            ></canvas>
+          </div>
+
+          <!-- Record button with microphone icon -->
+          <button
+            id="speak-button"
+            class="w-16 h-16 rounded-full bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 transition-colors duration-200 flex items-center justify-center"
+          >
+            <!-- Microphone SVG icon -->
+            <svg class="w-8 h-8" fill="none" stroke="white" viewBox="0 0 24 24">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
+              />
+            </svg>
+          </button>
+
+          <!-- Status message display -->
+          <p
+            id="status"
+            class="text-center text-gray-600 dark:text-gray-400 min-h-[1.5rem]"
+          >
+            Prêt
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <!-- JavaScript module import -->
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>

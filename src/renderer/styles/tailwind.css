@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.recording {
+    @apply animate-pulse-slow text-red-500 dark:text-red-400;
+}
+
+.processing {
+    @apply text-blue-500 dark:text-blue-400;
+}
+
+.success {
+    @apply text-green-500 dark:text-green-400;
+}
+
+.error {
+    @apply text-red-500 dark:text-red-400;
+}
