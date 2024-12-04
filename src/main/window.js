@@ -1,5 +1,5 @@
 const { BrowserWindow } = require("electron/main"); 
-const path = require("path");
+const path = require("node:path");
 
 /**
  * Creates and configures the main application window
@@ -14,7 +14,8 @@ function createWindow() {
       // Security-related preferences
       nodeIntegration: false, // Disable Node.js integration in renderer process for security
       contextIsolation: true, // Enable context isolation between main and renderer processes
-      preload: path.join(__dirname, "../preload/preload.js"), // Path to preload script
+      preload: path.join(__dirname, "../preload/preload.js"), // Path to preload script,
+      sandbox: false,
     },
   });
 

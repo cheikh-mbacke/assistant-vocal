@@ -103,7 +103,7 @@ export class UIControls {
         break;
 
       case "success":
-        this.statusText.textContent = `Commande exécutée : ${message}`;
+        this.statusText.textContent = message;
         this.speakButton.classList.add("bg-indigo-600", "hover:bg-indigo-700");
         break;
 
